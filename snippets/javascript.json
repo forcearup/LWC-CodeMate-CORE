@@ -1,0 +1,1101 @@
+{
+	"roy.lwc.wire-service-with-function": {
+	   "prefix": "roy.lwc.wire-service-with-function",
+	   "body": ["@track property;",
+	   "@track error;",
+	   "@wire(apexMethodName)",
+	   "wiredProperty({data, error}){",
+	   "    if(data){",
+	   "        this.property = data;",
+	   "        this.error = undefined;",
+	   "     }",
+	   "     else if (error) {",
+	   "           this.error = error;",
+	   "           this.property = undefined;",
+	   "         }",
+	   "}",
+		   "$2"
+			  ],
+	   "description": "LWC Wire Service (LDS) with Function. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.app-event-pub": {
+	   "prefix": "roy.lwc.app-event-pub",
+	   "body": ["/***  import { CurrentPageReference } from 'lightning/navigation';  ***/",
+	   "/***  import { fireEvent } from 'c/pubsub'  ***/",
+	   "@wire(CurrentPageReference) pageRef;",
+	   "    pubMethod(){",
+	   "        fireEvent(this.pageRef, 'YourEventName', this.attr);",
+	   "      }",
+	   "    }",
+		   "$2"
+			  ],
+	   "description": "LWC App Event Publisher. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.app-event-sub": {
+	   "prefix": "roy.lwc.app-event-sub",
+	   "body": ["/*** import { registerListener, unregisterAllListeners } from 'c/pubsub'; ***/",
+	   "/*** import { CurrentPageReference } from 'lightning/navigation'; ***/",
+	   "@wire(CurrentPageReference) pageRef;", 
+	   "      connectedCallback() {",
+	   "      // subscribe to YourEventName event",
+	   "         registerListener('YourEventName', this.subMethod, this);",
+	   "     }",
+	   
+	   "     disconnectedCallback() {",
+	   "     // unsubscribe from YourEventName event",
+	   "        unregisterAllListeners(this);",
+	   "      }",
+	   
+	   "subMethod(attr) {",
+	   "       this.attr = attr;",
+	   "     }",
+	   "$2"
+			  ],
+	   "description": "LWC App Event Subscriber. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.for-each": {
+	   "prefix": "roy.lwc.for-each",
+	   "body": ["items.forEach(function(item){",
+	   "    /**logic here !*/",
+	   "  });",
+	   "$2"
+			  ],
+	   "description": "LWC forEach Iteration Method. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.array-key-val-pair": {
+	   "prefix": "roy.lwc.collection-key-val-pair",
+	   "body": ["this.collection.push({",
+	   "      key:keyAttr,",
+	   "      value:valueAttr",
+	   "  });",
+	   "$2"
+			  ],
+	   "description": "LWC Key-Val item push in Collection . (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.array-slice": {
+	   "prefix": "roy.lwc.array-slice",
+	   "body": ["/***  eslint-disable-next-line  ***/",  
+	   "     console.log(\">>> value of varSample is ... \"+this.varSample);",
+	   "$2"
+			  ],
+	   "description": "LWC Array Slice. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.custom-dispatchEvent": {
+	   "prefix": "roy.lwc.custom-dispatchEvent",
+	   "body": ["const event = new CustomEvent('YourEvent', {detail: {\".... Body....\"}});",
+	   "       this.dispatchEvent(event);",
+	   "$2"
+			  ],
+	   "description": "LWC Dispatch Event Method. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.preventDefault": {
+	   "prefix": "roy.lwc.preventDefault",
+	   "body": ["event.preventDefault();",
+	   "$2"
+			  ],
+	   "description": "LWC Prevent Default Method. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.array-form": {
+	   "prefix": "roy.lwc.array-form",
+	   "body": ["array.from(object/*, mapFunction, thisValue*/)",
+	   "$2"
+			  ],
+	   "description": "LWC Array Form Method. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.array-indexOf": {
+	   "prefix": "roy.lwc.array.indexOf",
+	   "body": ["array.indexOf(item, start)",
+	   "$2"
+			  ],
+	   "description": "LWC Array indexOf Method. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.array-join": {
+	"prefix": "roy.lwc.array.join",
+	"body": ["array.join(\"separator\")",
+	"$2"
+		   ],
+	"description": "LWC Array Join Method. (ROY-LWC CodeMate)"
+   },	
+   "roy.lwc.array-lastIndexOf": {
+	   "prefix": "roy.lwc.array-lastIndexOf",
+	   "body": ["array.lastIndexOf(item, start)",
+	   "$2"
+			  ],
+	   "description": "LWC Array lastIndexOf Method. (ROY-LWC CodeMate)"
+   },	
+   "roy.lwc.array-push": {
+	   "prefix": "roy.lwc.array-push",
+	   "body": ["array.push(item1, item2, ..., itemX)",
+	   "$2"
+			  ],
+	   "description": "LWC Array push Method. (ROY-LWC CodeMate)"
+   },	
+   "roy.lwc.array-reverse": {
+	   "prefix": "roy.lwc.array-reverse",
+	   "body": ["array.reverse()",
+	   "$2"
+			  ],
+	   "description": "LWC Array reverse Method. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.array-shift": {
+	   "prefix": "roy.lwc.array-shift",
+	   "body": ["array.shift()",
+	   "$2"
+			  ],
+	   "description": "LWC Array shift Method. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.array-valueOf": {
+	   "prefix": "roy.lwc.array-valueOf",
+	   "body": ["array.valueOf()",
+	   "$2"
+			  ],
+	   "description": "LWC Array valueOf Method. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.for-loop": {
+	   "prefix": "roy.lwc.for-loop",
+	   "body": ["for (let key in this.collection) {",
+		   "/*** Execution Logic... ***/",
+	   "   }",
+	   "$2"
+			  ],
+	   "description": "LWC For Loop. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.get": {
+	   "prefix": "roy.lwc.get",
+	   "body": ["get MyGetMethod(){",
+	   "        return \"statement\"",
+	   "     }",
+	   "$2"
+			  ],
+	   "description": "LWC Get Method. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.set": {
+	   "prefix": "roy.lwc.set",
+	   "body": ["set title(value) {",
+	   "   this.myTitle = value.toUpperCase();",
+	   "   this.setAttribute('title', this.myTitle);",
+	   "}",
+	   "$2"
+			  ],
+	   "description": "LWC Set Method. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.getter-setter": {
+	   "prefix": "roy.lwc.getter-setter",
+	   "body": ["  @track privateTitle;",
+	   "  @api",
+	   
+	   "  get title() {",
+	   "    return this.privateTitle;",
+	   "  }",
+
+	   "  set title(value) {",
+	   "    this.privateTitle = value.toUpperCase();",
+	   "    this.setAttribute('title', this.privateTitle);",
+	   "  }",
+	   "  /*** Best practice to use @api annotation in getter. ***/",
+	   "$2"
+			  ],
+	   "description": "LWC Getter-Setter Method. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.recordid": {
+	   "prefix": "roy.lwc.recordid",
+	   "body": ["@api recordId;",
+	   "$2"
+			  ],
+	   "description": "LWC GGet Record ID.. (ROY-LWC CodeMate)"
+   },
+
+   "roy.lwc.apex-imperative-method": {
+	   "prefix": "roy.lwc.apex-imperative-method",
+	   "body": ["param;",
+	   "      myCallbackMethod() {",
+	   "          if (this.param) {",
+	   "             MyapexMethod({ paramVar: this.param })",
+	   "                 .then(result => {",
+	   "                     // Success logic...",
+	   "             })",
+	   "                 .catch(error => {",
+	   "                     // Error logic...",
+	   "                  });",
+	   "          }",
+	   "       }",
+	   "$2"
+			  ],
+	   "description": "LWC Apex Imperative Method. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.import-apex-class": {
+	   "prefix": "roy.lwc.import-apex-class",
+	   "body": ["import myMethod from '@salesforce/apex/ApexClassName.methodName';",
+	   "$2"
+			  ],
+	   "description": "LWC import Apex Class. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.import-static-resource": {
+	   "prefix": "roy.lwc.import-static-resource",
+	   "body": ["import sampleResource from '@salesforce/resourceUrl/resourceReference';",
+	   "$2"
+			  ],
+	   "description": "LWC import Static Resource. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.import-static-resource-with-namespace": {
+	   "prefix": "roy.lwc.import-static-resource-with-namespace",
+	   "body": ["import sampleResource from '@salesforce/resourceUrl/namespacename__resourceReference';",
+	   "$2"
+			  ],
+	   "description": "LWC import Static Resource with Namespace. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.import-field": {
+	   "prefix": "roy.lwc.import-field",
+	   "body": ["import USER_NAME_FIELD from '@salesforce/schema/User.Name';",
+	   "$2"
+			  ],
+	   "description": "LWC import Field Schema. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.import-label": {
+	   "prefix": "roy.lwc.import-label",
+	   "body": ["import CustomlabelName from '@salesforce/label/c.CustomlabelReference';",
+	   "$2"
+			  ],
+	   "description": "LWC import Custom Label. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.import-list-view": {
+	   "prefix": "roy.lwc.import-list-view",
+	   "body": ["import { getListUi } from 'lightning/uiListApi';",
+	   "$2"
+			  ],
+	   "description": "LWC import List View. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.import-current-page-ref": {
+	   "prefix": "roy.lwc.import-current-page-ref",
+	   "body": ["import { CurrentPageReference } from 'lightning/navigation';",
+
+	   "    /*** API's are: [NavigationMixin.Navigate](pageReference, [replace])", 
+	   "         and",
+	   "         [NavigationMixin.GenerateUrl](pageReference) ***/",
+	   "$2"
+			  ],
+	   "description": "LWC import Current Page Ref. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.import-object": {
+	   "prefix": "roy.lwc.import-object-schema",
+	   "body": ["import CONTACT_OBJECT from '@salesforce/schema/Contact';",
+	   "$2"
+			  ],
+	   "description": "LWC import Object Schema. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.import-toast-event": {
+	   "prefix": "roy.lwc.import-toast-event",
+	   "body": ["import { ShowToastEvent } from 'lightning/platformShowToastEvent';",
+	   "$2"
+			  ],
+	   "description": "LWC import Toast Event. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.import-ui-record": {
+	   "prefix": "roy.lwc.import-ui-record",
+	   "body": ["import {createRecord, getRecord, getRecordCreateDefaults, getRecordUi, updateRecord, deleteRecord, getFieldValue} from 'lightning/uiRecordApi';",
+	   "$2"
+			  ],
+	   "description": "LWC import UI RecordAPI Event. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.import-user-id": {
+	   "prefix": "roy.lwc.import-user-id",
+	   "body": ["import userId from '@salesforce/user/Id';",
+	   "$2"
+			  ],
+	   "description": "LWC import User ID. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.navigate-to-new-record-page": {
+	   "prefix": "roy.lwc.navigate-to-new-record-page",
+	   "body": ["/*** import { NavigationMixin } from 'lightning/navigation';",
+	   "Class should \"extends NavigationMixin(LightningElement)\" ***/",
+	   "  navigateToNewRecordPage() {",
+	   "     this[NavigationMixin.Navigate]({",
+	   "       type: 'standard__recordPage',",
+	   "       attributes: {",
+	   "           recordId: this.recordId,",
+	   "           objectApiName: 'Account',",
+	   "           actionName: 'new'",
+	   "           },",
+	   "       });",
+	   "}",
+	   "$2"
+			  ],
+	   "description": "LWC Navigate To New Record Page. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.navigate-to-edit-record-page": {
+	   "prefix": "roy.lwc.navigate-to-edit-record-page",
+	   "body": ["/*** import { NavigationMixin } from 'lightning/navigation';",
+	   "Class should \"extends NavigationMixin(LightningElement)\" ***/",
+	   "  navigateToEditRecordPage() {",
+	   "   this[NavigationMixin.Navigate]({",
+	   "       type: 'standard__recordPage',",
+	   "           attributes: {",
+	   "           recordId: this.recordId,",
+	   "           objectApiName: 'Account',",
+	   "           actionName: 'edit'",
+	   "       },",
+	   "    });",
+	   " }",
+	   "$2"
+			  ],
+	   "description": "LWC Navigate To Edit Record Page. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.navigate-to-view-record-page": {
+	   "prefix": "roy.lwc.navigate-to-view-record-page",
+	   "body": ["/*** import { NavigationMixin } from 'lightning/navigation';",
+	   "Class should \"extends NavigationMixin(LightningElement)\" ***/",
+	   "  navigateToViewRecordPage() {",
+	   "    this[NavigationMixin.Navigate]({",
+	   "       type: 'standard__recordPage',",
+	   "       attributes: {",
+	   "          recordId: this.recordId,",
+	   "          objectApiName: 'Account',",
+	   "          actionName: 'view'",
+	   "       },",
+	   "   });",
+	   "  }",
+	   "$2"
+			  ],
+	   "description": "LWC Navigate To View Record Page. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.navigate-to-object-recent-view-page": {
+	   "prefix": "roy.lwc.navigate-to-object-recent-view-page",
+	   "body": ["/*** import { NavigationMixin } from 'lightning/navigation';",
+	   "Class should \"extends NavigationMixin(LightningElement)\" ***/",
+	   "  navigateAccRecentView() {",
+	   "   this[NavigationMixin.Navigate]({",
+	   "       type: 'standard__objectPage',",
+	   "       attributes: {",
+	   "           objectApiName: Account,",
+	   "           actionName: 'list'",
+	   "       },",
+	   "      state: {",
+	   "          filterName: 'Recent'",
+	   "      }",
+	   "    });",
+	   "  }",
+	   "$2"
+			  ],
+	   "description": "LWC Navigate To Object (for exmple \"Account\") Recent List View Page. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.navigate-to-related-list-view-page": {
+	   "prefix": "roy.lwc.navigate-to-related-list-view-page",
+	   "body": ["/*** import { NavigationMixin } from 'lightning/navigation';",
+	   "Class should \"extends NavigationMixin(LightningElement)\" ***/",
+	   "  navigateRelatedListView() {",
+	   "   this[NavigationMixin.Navigate]({",
+	   "       type: 'standard__recordRelationshipPage',",
+	   "       attributes: {",
+	   "           recordId: this.recordId,",
+	   "           objectApiName: 'Account',",
+	   "           relationshipApiName: 'Contacts',",
+	   "           actionName: 'view'",
+	   "       },",
+	   "    });",
+	   "  }",
+	   "$2"
+			  ],
+	   "description": "LWC Navigate To Related List View Page. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.navigate-to-object-page": {
+	   "prefix": "roy.lwc.navigate-to-object-page",
+	   "body": ["/*** import { NavigationMixin } from 'lightning/navigation';",
+	   "Class should \"extends NavigationMixin(LightningElement)\" ***/",
+	   "  navigateAccObject() {",
+	   "   this[NavigationMixin.Navigate]({",
+	   "       type: 'standard__objectPage',",
+	   "            attributes: {",
+	   "                objectApiName: 'ObjectName',",
+	   "                actionName: 'home'",
+	   "      }",
+	   "   });",
+	   "  }",
+	   "$2"
+			  ],
+	   "description": "LWC Navigate To Object Page. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.navigate-to-lightning-component": {
+	   "prefix": "roy.lwc.navigate-to-lightning-component",
+	   "body": ["/*** import { NavigationMixin } from 'lightning/navigation';",
+	   "Class should \"extends NavigationMixin(LightningElement)\" ***/",
+	   "  navigateToComponent() {",
+	   "     this[NavigationMixin.Navigate]({",
+	   "        type: standard__component,",
+	   "            attributes: {",
+	   "                componentName: c__NavigationDemoComponent", 
+	   "       }",
+	   "   });",
+	   "  }",
+	   "$2"
+			  ],
+	   "description": "LWC Navigate To Lightning Compoent. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.navigate-to-web-page": {
+	   "prefix": "roy.lwc.navigate-to-web-page",
+	   "body": ["/*** import { NavigationMixin } from 'lightning/navigation';",
+	   "Class should \"extends NavigationMixin(LightningElement)\" ***/",
+	   "  navigateToWebPage() {",
+	   "   this[NavigationMixin.Navigate]({",
+	   "       type: standard__webPage,",
+	   "       attributes: {",
+	   "          url: https://www.sampleurl.com",
+	   "       }",
+	   "    });",
+	   "  }",
+	   "$2"
+			  ],
+	   "description": "LWC Navigate To Web Page. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.navigate-to-home-page": {
+	   "prefix": "roy.lwc.navigate-to-home-page",
+	   "body": ["/*** import { NavigationMixin } from 'lightning/navigation';",
+	   "Class should \"extends NavigationMixin(LightningElement)\" ***/",
+	   "  navigateToHomePage() {",
+	   "   this[NavigationMixin.Navigate]({",
+	   "       type: 'standard__namedPage',",
+	   "       attributes: {",
+	   "          pageName: 'home'",
+	   "      },",
+	   "   });",
+	   "  }",
+	   "$2"
+			  ],
+	   "description": "LWC Navigate To Home Page. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.navigate-to-chatter-home-page": {
+	   "prefix": "roy.lwc.navigate-to-chatter-home-page",
+	   "body": ["/*** import { NavigationMixin } from 'lightning/navigation';",
+	   "Class should \"extends NavigationMixin(LightningElement)\" ***/",
+	   "  navigateToChatterHome() {",
+	   "    this[NavigationMixin.Navigate]({",
+	   "       type: 'standard__namedPage',",
+	   "       attributes: {",
+	   "            pageName: 'chatter'",
+	   "       },",
+	   "   });",
+	   "  }",
+	   "$2"
+			  ],
+	   "description": "LWC Navigate To Chatter Home Page. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.import-navigation": {
+	   "prefix": "roy.lwc.import-navigation",
+	   "body": ["/*** Class should \"extends NavigationMixin(LightningElement)\" ***/",
+	   "import { NavigationMixin } from 'lightning/navigation';",
+	   "$2"
+			  ],
+	   "description": "LWC Import navigation. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.import-api": {
+	   "prefix": "roy.lwc.import-public-property-api",
+	   "body": ["import { LightningElement, api } from 'lwc';",
+	   "$2"
+			  ],
+	   "description": "LWC Import @api. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.api.public-property": {
+	   "prefix": "roy.lwc.import-public-property-by-api",
+	   "body": ["@api objectApiName;",
+	   "@api itemName = 'New Item';",
+	   "$2"
+			  ],
+	   "description": "LWC Declare Reactive Public property by @api. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.object": {
+	   "prefix": "roy.lwc.object",
+	   "body": ["@api objectApiName;",
+	   "$2"
+			  ],
+	   "description": "LWC Import Object by @api. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.track-private-property": {
+	   "prefix": "roy.lwc.import-private-property-by-track",
+	   "body": ["@track percentage = 50;",
+	   "$2"
+			  ],
+	   "description": "LWC @track Reactive Private Propety Declaration. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.track-api-usecase": {
+	   "prefix": "roy.lwc.track-api-usecase",
+	   "body": ["import { LightningElement, api, track } from 'lwc';",
+	   "export default class TodoItem extends LightningElement {",
+	   "   @track",
+	   "   ItemName;",
+	   
+	   "   @api",
+	   "   get itemName() {",
+	   "      return this.ItemName;",
+	   "   }",
+	   
+	   "   set itemName(value) {",
+	   "     this.ItemName = value.getVal);",
+	   "   }",
+	   
+	   "}",
+	   "$2"
+			  ],
+	   "description": "LWC @api & @track Code Example. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.import-wire": {
+	   "prefix": "roy.lwc.import-wire",
+	   "body": ["import { wire} from 'lwc';",
+	   "$2"
+			  ],
+	   "description": "LWC Import @wire Service. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.wire-property-function-with-adapter": {
+	   "prefix": "roy.lwc.wire-property-function-with-adapter",
+	   "body": ["@wire(adapterId, adapterConfig)",
+	   "     propertyOrFunction;",
+	   "$2"
+			  ],
+	   "description": "LWC Import @wire Service. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.wire-uiApi-getrecord": {
+	   "prefix": "roy.lwc.wire-uiApi-getrecord",
+	   "body": ["import { getRecord, getFieldValue } from 'lightning/uiRecordApi';",
+	   "import ACCOUNT_NAME_FIELD from '@salesforce/schema/Account.Name';",
+	   "     export default class Record extends LightningElement {",
+	   "        @api recordId;",
+	   "        @wire(getRecord, { recordId: 'recordId', fields: [ACCOUNT_NAME_FIELD] }) accObj;",
+	   "     get name(){",
+	   "        return getFieldValue(this.accObj.data, ACCOUNT_NAME_FIELD);",
+	   "   }",
+	   "}",
+	   "$2"
+			  ],
+	   "description": "LWC code snippet on UI API getrecord() function with param. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.wire-apexfunction": {
+	   "prefix": "roy.lwc.wire-apexfunction",
+	   "body": ["import { LightningElement, wire, track } from 'lwc';",
+	   "import myApexMethod from '@salesforce/apex/ContactController.myApexMethod';",
+	   
+	   "export default class ApexWireMethodToFunction extends LightningElement {",
+	   "   @track prop;",
+	   "   @track error;",
+	   
+	   "   @wire(myApexMethod)",
+	   "   wiredProp({ error, data }) {",
+	   "       if (data) {",
+	   "           this.prop = data;",
+	   "           this.error = undefined;",
+	   "       } else if (error) {",
+	   "           this.error = error;",
+	   "           this.prop = undefined;",
+	   "       }",
+	   "   }",
+	   "}",
+	   "$2"
+			  ],
+	   "description": "LWC Code Snippet of @Wire Service for Apex Function. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.wire-apexfunction-with-param": {
+	   "prefix": "roy.lwc.wire-apexfunction-with-param",
+	   "body": ["@track param = '';",
+	   "       @track prop;",
+	   "       @track error;",
+	   "       @wire(myApexMethod, {myParam:'param'})",
+	   "          wiredProp({data, error}){",
+	   "             if(data){",
+	   "               this.prop = data;",
+	   "               this.error = undefined;",
+	   "             }",
+	   "             else if (error) {",
+	   "                this.error = error;",
+	   "                this.prop = undefined;",
+	   "       }",
+	   "  }",
+	   "$2"
+			  ],
+	   "description": "LWC Code Snippet of @Wire Service for Apex Function with Parameter. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.querySelector-css": {
+	   "prefix": "roy.lwc.querySelector-css",
+	   "body": ["this.template.querySelector('h2').style.backgroundColor = 'red';",
+	   "$2"
+			  ],
+	   "description": "LWC querySelector for CSS. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.querySelector": {
+	   "prefix": "roy.lwc.querySelector",
+	   "body": ["@track name;",
+	   "handleClick(event)",
+	   "   {",
+	   "    this.template.querySelector('lightning-input').value =  this.name;",
+	   "   /*   this.template.querySelector('.div').textContent",
+	   "        this.template.querySelector('.clsName:second-child')   */",
+	   "}",
+	   "$2"
+			  ],
+	   "description": "LWC querySelector. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.querySelectorAll": {
+	   "prefix": "roy.lwc.querySelectorAll",
+	   "body": ["let collectionList = this.template.querySelectorAll('.clsName');",
+	   "$2"
+			  ],
+	   "description": "LWC querySelectorAll. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.querySelectorAll-with-loop": {
+	   "prefix": "roy.lwc.querySelectorAll-with-loop",
+	   "body": ["const cols = document.querySelectorAll('.col');",
+
+	   "     [].forEach.call(cols, (e)=>{",
+	   "     console.log(e);",
+	   "      });",
+	   "/*** NOTE: 'NodeList' not supported in Safari, IE and Edge ***/",
+	   "$2"
+			  ],
+	   "description": "LWC querySelectorAll with Loop. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.import-external-js-libraries": {
+	   "prefix": "roy.lwc.import-external-js-libraries",
+	   "body": ["/*** import Block ***/",
+	   "/* ",
+	   "import { LightningElement } from 'lwc';",
+	   "import { ShowToastEvent } from 'lightning/platformShowToastEvent';",
+	   "import { loadScript, loadStyle } from 'lightning/platformResourceLoader';",
+	   "import SampleJSLibrary from '@salesforce/resourceUrl/sampleJSLibrary'; */",
+	   "  export default class extLib extends LightningElement {",
+	   "     SampleJSLibraryInitialized = false;",
+		 
+	   "       renderedCallback() {",
+	   "           if (this.SampleJSLibraryInitialized) {",
+	   "              return;",
+	   "            }",
+	   "            this.SampleJSLibraryInitialized = true;",
+		 
+	   "   Promise.all([",
+	   "     loadScript(this, SampleJSLibrary + '/samplefile.min.js'),",
+	   "     loadStyle(this, SampleJSLibrary + '/style.css'),",
+	   "     ])",
+	   "       .then(() => {",
+	   "           this.initializeSampleJSLibrary();",
+	   "       })",
+	   "          .catch(error => {",
+	   "           this.dispatchEvent(",
+	   "               new ShowToastEvent({",
+	   "                 title: 'Error loading SampleJSLibrary',",
+	   "                 message: error.message,",
+	   "                 variant: 'error',",
+	   "           }),",
+	   "        );",
+	   "     });",
+	   "   }",
+		 
+	   "        initializeSampleJSLibrary() { /* Code here...*/ }",
+	   " }",	
+	   "$2"
+			  ],
+	   "description": "LWC Import External JS Libraries. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.export-js": {
+	   "prefix": "roy.lwc.export-js",
+	   "body": ["// mortgage.js",
+	   "const getTermOptions = () => {",
+	   "   return [",
+	   "       { label: '20 years', value: 20 },",
+	   "       { label: '25 years', value: 25 },",
+	   "   ];",
+	   "};",
+	   
+	   "const calculateMonthlyPayment = (principal, years, rate) => {",
+	   "   //Logic",
+	   "};",
+	   
+	   "   export { getTermOptions, calculateMonthlyPayment };",
+
+	   "/*** OTHER COMPONENT IMPORT STATEMENT: import { getTermOptions, calculateMonthlyPayment } from 'c/mortgage';    ***/",
+	   "$2"
+			  ],
+	   "description": "LWC Export Named Functions or Variables. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.internalization": {
+	   "prefix": "roy.lwc.internalization",
+	   "body": ["import LANG from '@salesforce/i18n/lang';",
+	   "/*** import LOCALE from '@salesforce/i18n/locale';",
+	   "     import CURRENCY from '@salesforce/i18n/currency'; ***/",
+	   "$2"
+			  ],
+	   "description": "LWC Internalization Do Format data According to the User’s Localized Specification . (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.setAttribute": {
+	   "prefix": "roy.lwc.setAttribute",
+	   "body": ["this.setAttribute('title', this.myTitle);",
+	   "$2"
+			  ],
+	   "description": "LWC setAttribute to update HTML markup dynamically. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.hook-constructor": {
+	   "prefix": "roy.lwc.hook-constructor",
+	   "body": ["constructor() {",
+	   "   super();",
+	   "   this.classList.add('new-class');",
+	   "}",
+	   "$2"
+			  ],
+	   "description": "LWC constructor() Hook. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.hook-connectedCallback": {
+	   "prefix": "roy.lwc.hook-connectedCallback",
+	   "body": ["/***  import { registerListener } from 'c/pubsub'; ***/",
+	   "connectedCallback() {",
+	   "    this.classList.add('new-class');",
+	   " registerListener('myMethod', this.myMethod, this);",
+	   "}",		
+	   "$2"
+			  ],
+	   "description": "LWC connectedCallback() Hook. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.hook-disconnectedCallback": {
+	   "prefix": "roy.lwc.hook-disconnectedCallback",
+	   "body": ["/***  import { unregisterAllListeners } from 'c/pubsub'; ***/",
+
+	   "    disconnectedCallback() {",
+	   "      /*** unsubscribe  event  ***/",
+	   "      unregisterAllListeners(this);",
+	   "}",		
+	   "$2"
+			  ],
+	   "description": "LWC disconnectedCallback() Hook. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.hook-render": {
+	   "prefix": "roy.lwc.hook-render",
+	   "body": ["render()",		
+	   "$2"
+			  ],
+	   "description": "LWC render() Hook. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.hook-renderedCallback": {
+	   "prefix": "roy.lwc.hook-renderedCallback",
+	   "body": ["samplejsInitialized = false;",	
+	   "   renderedCallback() {",
+	   "    if (this.samplejsInitialized) {",
+	   "        return;",
+	   "    }",
+	   "    this.samplejsInitialized = true;",
+	   "    this.loadSampleAsyncJsMethod();",
+	   "  }",	
+	   "$2"
+			  ],
+	   "description": "LWC renderedCallback() Hook. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.hook-errorCallback": {
+	   "prefix": "roy.lwc.hook-errorCallback",
+	   "body": ["import { LightningElement, track } from 'lwc';",  
+	   "   @track error;",
+	   "   @track stack;",
+	   "       errorCallback(error, stack) {",
+	   "       this.error = error;",
+	   "   }",
+	   "$2"
+			  ],
+	   "description": "LWC errorCallback() Hook. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.uiApi-createRecord": {
+	   "prefix": "roy.lwc.uiApi-createRecord",
+	   "body": ["import { LightningElement, track} from 'lwc';",
+	   
+	   "// import uiRecordApi to create record",
+	   "import { createRecord } from 'lightning/uiRecordApi';",
+	   "// importing to show toast notifictions",
+	   "import {ShowToastEvent} from 'lightning/platformShowToastEvent';",
+	   
+	   "// importing Account fields",
+	   "import ACCOUNT_OBJECT from '@salesforce/schema/Account';",
+	   "import NAME_FIELD from '@salesforce/schema/Account.Name';",
+	   "import Phone_FIELD from '@salesforce/schema/Account.Phone';",
+	   "import Industry_FIELD from '@salesforce/schema/Account.Industry';",
+	   "import TYPE_FIELD from '@salesforce/schema/Account.Type';",
+	   
+	   "export default class CreateRecordInLWC extends LightningElement {",
+	   "   // this object have record information",
+	   "    @track accRecord = {",
+	   "       Name : NAME_FIELD,",
+	   "       Industry : INDUSTRY_FIELD,",
+	   "       Phone : PHONE_FIELD,",
+	   "       Type : TYPE_FIELD",
+	   "   };",
+	   
+	   "   handleNameChange(event) {",
+	   "      this.accRecord.Name = event.target.value;",
+	   "   }",
+	   
+	   "   handlePhoneChange(event) {",
+	   "       this.accRecord.Phone = event.target.value;",
+	   "   }",
+	   
+	   "   handleTypeChange(event) {",
+	   "       this.accRecord.Type = event.target.value;",
+	   "   }",
+	   
+	   "   handleIndustryChange(event) {",
+	   "      this.accRecord.Industry = event.target.value;",
+	   "   }",
+	   
+	   "   handleSave() {",
+	   "       const fields = {};",
+	   
+	   "       fields[NAME_FIELD.fieldApiName] = this.accRecord.Name;",
+	   "       fields[PHONE_FIELD.fieldApiName] = this.accRecord.Phone;",
+	   "       fields[INDUSTRY_FIELD.fieldApiName] = this.accRecord.Industry;",
+	   "       fields[TYPE_FIELD.fieldApiName] = this.accRecord.Type;",
+			  
+	   "          // Creating record using uiRecordApi",
+	   "       let recordInput = { apiName: ACCOUNT_OBJECT.objectApiName, fields }",
+	   "       createRecord(recordInput)",
+	   "       .then(result => {",
+	   "           // Clear the user enter values",
+	   "           this.accRecord = {};",
+	   
+	   "           window.console.log('result ===> '+result);",
+	   "           // Show success messsage",
+	   "              this.dispatchEvent(new ShowToastEvent({",
+	   "               title: 'Success!!',",
+	   "               message: 'Account Created Successfully!!',",
+	   "               variant: 'success'",
+	   "         }),);",
+	   "     })",
+	   "       .catch(error => {",
+	   "           this.dispatchEvent(",
+	   "               new ShowToastEvent({",
+	   "                   title: 'Error creating record',",
+	   "                   message: error.body.message,",
+	   "                   variant: 'error',",
+	   "             }),",
+	   "          );",
+	   "      });",
+	   "  }",
+	   "}",
+	   "$2"
+			  ],
+	   "description": "LWC code snippet on UI API createRecord() Function. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.uiApi-getRecord": {
+	   "prefix": "roy.lwc.uiApi-getRecord",
+	   "body": ["import { LightningElement, api, wire } from 'lwc';",
+	   "import { getRecord, getFieldValue } from 'lightning/uiRecordApi';",
+	   "import ACCOUNT_NAME_FIELD from '@salesforce/schema/Account.Name';",
+	   "const FIELDS= [ACCOUNT_NAME_FIELD];",
+	   
+	   "export default class Record extends LightningElement {",
+	   "   @api recordId;",
+	   
+	   "   @wire(getRecord, { recordId: '$recordId', fields: FIELDS} accObj)",
+	   "   get accName(){",
+	   "       return getFieldValue(this.accObj.data, ACCOUNT_NAME_FIELD);",
+	   "   }",
+	   "}",
+	   "$2"
+			  ],
+	   "description": "LWC code snippet on UI API getRecord() Function. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.eslint-disable": {
+	   "prefix": "roy.lwc.eslint-disable",
+	   "body": ["/* eslint-disable */",
+
+	   "      Item here...",	
+
+	   "/* eslint-enable */",
+	   "$2"
+			  ],
+	   "description": "LWC Eslint Disable, To temporarily disable rule warnings in your file. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.eslint-disable-entire-file": {
+	   "prefix": "roy.lwc.eslint-disable-entire-file",
+	   "body": ["/* eslint-disable */",
+	   "$2"
+			  ],
+	   "description": "LWC Eslint Disable Entire File, To disable rule warnings in an entire file, put a this block comment at the top of the file. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.eslint-disable-line": {
+	   "prefix": "roy.lwc.eslint-disable-line",
+	   "body": ["/*** Item here... ***/ // eslint-disable-line no-alert",
+	   "$2"
+			  ],
+	   "description": "LWC Eslint Disable Line, To disable a specific rule on a specific line. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.eslint-disable-next-line": {
+	   "prefix": "roy.lwc.eslint-disable-next-line",
+	   "body": ["// eslint-disable-next-line",
+	   "    /*** Item here... ***/",
+	   "$2"
+			  ],
+	   "description": "LWC Eslint Disable Next Line, To disable a specific rule on a specific line. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.eslint-mnultiple-rule-same-line": {
+	   "prefix": "roy.lwc.eslint-mnultiple-rule-same-line",
+	   "body": ["/*** Item here... ***/ // eslint-disable-line no-alert, quotes, semi",
+	   "$2"
+			  ],
+	   "description": "LWC Eslint Multiple Rule in same Line, To disable multiple rules on a specific line. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.eslint-mnultiple-rule-next-line": {
+	   "prefix": "roy.lwc.eslint-mnultiple-rule-next-line",
+	   "body": ["// eslint-disable-next-line no-alert, quotes, semi",
+	   "    /*** Item here... ***/",
+	   "$2"
+			  ],
+	   "description": "LWC Eslint Multiple Rule in next Line,To disable multiple rules on a specific line. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.console-log-with-eslint": {
+	   "prefix": "roy.lwc.console-log-with-eslint",
+	   "body": ["console.log(\"Watch: varName ->\"+this.varName); /*eslint-disable-line*/",
+	   "$2"
+			  ],
+	   "description": "LWC console.log() with Disable Feature (Eslist). (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.toast-event-error": {
+	   "prefix": "roy.lwc.toast-event-error",
+	   "body": ["import {LightningElement} from 'lwc';",
+	   "import {ShowToastEvent} from 'lightning/platformShowToastEvent';",
+	   "export default class Notification extends LightningElement {",
+	   "   showErrorToast() {",
+	   "       const evt = new ShowToastEvent({",
+	   "           title: 'Application Error',",
+	   "           message: 'Went wrong in Application ',",
+	   "           variant: 'error',",
+	   "           mode: 'dismissable'",
+	   "       });",
+	   "       this.dispatchEvent(evt);",
+	   "   }",
+	   "}",
+	   "$2"
+			  ],
+	   "description": "LWC Toast Event To Show Error. (ROY-LWC CodeMate)"
+   },
+
+   "roy.lwc.toast-event-success": {
+	   "prefix": "roy.lwc.toast-event-success",
+	   "body": ["import {LightningElement} from 'lwc';",
+	   "import {ShowToastEvent} from 'lightning/platformShowToastEvent';",
+	   "export default class Notification extends LightningElement {",
+	   "   showSuccessToast() {",
+	   "       const evt = new ShowToastEvent({",
+	   "           title: 'Record Update',",
+	   "           message: 'Application is Executed Successfully',",
+	   "           variant: 'success',",
+	   "           mode: 'dismissable'",
+	   "       });",
+	   "       this.dispatchEvent(evt);",
+	   "   }",
+	   "}",
+	   "$2"
+			  ],
+	   "description": "LWC Toast Event To Show Success. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.toast-event-warning": {
+	   "prefix": "roy.lwc.toast-event-warning",
+	   "body": ["import {LightningElement} from 'lwc';",
+	   "import {ShowToastEvent} from 'lightning/platformShowToastEvent';",
+	   "export default class Notification extends LightningElement {",
+	   "   showWarningToast() {",
+	   "       const evt = new ShowToastEvent({",
+	   "           title: 'Application Warning',",
+	   "           message: 'Alert! Something going Wrong.',",
+	   "           variant: 'warning',",
+	   "           mode: 'pester'",
+	   "       });",
+	   "       this.dispatchEvent(evt);",
+	   "   }",
+	   "}",
+	   "$2"
+			  ],
+	   "description": "LWC Toast Event To Show Warning. (ROY-LWC CodeMate)"
+   },
+   "roy.lwc.toast-event-info": {
+	   "prefix": "roy.lwc.toast-event-info",
+	   "body": ["import {LightningElement} from 'lwc';",
+	   "import {ShowToastEvent} from 'lightning/platformShowToastEvent';",
+	   "export default class Notification extends LightningElement {",
+	   "   showInfoToast() {",
+	   "       const evt = new ShowToastEvent({",
+	   "           title: 'Application Info',",
+	   "           message: 'Please contact Sys Admin.',",
+	   "           variant: 'info',",
+	   "           mode: 'dismissable'",
+	   "       });",
+	   "       this.dispatchEvent(evt);",
+	   "   }",
+	   "}",
+	   "$2"
+			  ],
+	   "description": "LWC Toast Event To Show Info. (ROY-LWC CodeMate)"
+   },
+	"roy.lwc.import-lightning-message-service": {
+		"prefix": "roy.lwc.import-lightning-message-service",
+	    "body": ["import { createMessageContext, releaseMessageContext",
+					 "subscribe, unsubscribe } from 'lightning/messageService';",
+		"$2"
+		       ],
+	    "description": "LWC- Import Lightning Message Service. This is Winter ’20 Updates. (ROY-LWC CodeMate)"
+	},
+	"roy.lwc.import-sample-message-channel": {
+		"prefix": "roy.lwc.import-sample-message-channel",
+	    "body": ["import SAMPLEMC from \"@salesforce/messageChannel/SampleMessageChannel__c\";",
+		"$2"
+		       ],
+	    "description": "LWC- Import Lightning Sample Message Channel Scoped Module. This is Winter ’20 Updates. (ROY-LWC CodeMate)"
+	},
+	"roy.lwc.lms.publish-message": {
+		"prefix": "roy.lwc.lms.publish-message",
+		"body": ["context = createMessageContext();",
+			"publishMsgC() {",
+			"   const message = {",
+			"       recordId: \"sample string\",",
+			"       recordData: { value: \"sample value\" }",
+			"   };",
+			"   publish(this.context, SAMPLEMC, message);",
+			"}",
+		"$2"
+		       ],
+	    "description": "LWC- Publish Message Method in LMS. This is Winter ’20 Updates. (ROY-LWC CodeMate)"
+	},
+	"roy.lwc.lms.release-message-context": {
+		"prefix": "roy.lwc.lms.release-message-context",
+		"body": ["releaseMessageContext(this.context);",
+		"$2"
+		       ],
+	    "description": "LWC- Release Message Context in LMS, May call within \"disconnectedCallback()\". This is Winter ’20 Updates. (ROY-LWC CodeMate)"
+	},
+	"roy.lwc.lms.subscribe-message": {
+		"prefix": "roy.lwc.lms.subscribe-message",
+		"body": ["/*** import SAMPLEMC from \"@salesforce/messageChannel/SampleMessageChannel__c\"; ***/",
+		    "context = createMessageContext();",
+			"subscribeMsgC() {",
+			"   if (this.subscription) {",
+			"       return;",
+			"   }",
+			"   this.subscription = subscribe(this.context, SAMPLEMC, (message) => {",
+			"      this.sampleName(message);",
+			"   });",
+			" }",
+		"$2"
+		       ],
+	    "description": "LWC- Subscribe Message Method in LMS. This is Winter ’20 Updates. (ROY-LWC CodeMate)"
+	},
+	"roy.lwc.lms.un-subscribe-message": {
+		"prefix": "roy.lwc.lms.un-subscribe-message",
+		"body": ["  unsubscribeMC() {",
+		"   unsubscribe(this.subscription);",
+		"   this.subscription = null;",
+		"  }",
+		"$2"
+		       ],
+	    "description": "LWC- UnSubscribe Message Method in LMS. This is Winter ’20 Updates. (ROY-LWC CodeMate)"
+	},
+	"roy.lwc.lms.handle-message": {
+		"prefix": "roy.lwc.lms.handle-message",
+		"body": ["/*** subscribe(this.context, SAMPLEMC, (message) => {\" ***/",  
+		"   sampleName(message) {",
+		"      this.receivedMessage = message ? JSON.stringify(message, null, '\t') : 'no message payload';",
+		"  }",
+		"$2"
+		       ],
+	    "description": "LWC- sampleName() can call from subscribe() to Handle Message in LMS. This is Winter ’20 Updates. (ROY-LWC CodeMate)"
+	}
+}
+
+
+

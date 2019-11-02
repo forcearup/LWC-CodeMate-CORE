@@ -1,0 +1,56 @@
+{
+	"roy.lwc.targets": {
+        "prefix": "roy.lwc.targets",
+        "body": ["<targets>",
+		"<target>lightning__AppPage</target>",    
+		"<target>lightning__HomePage</target>",
+		"<target>lightning__RecordPage</target>", 
+	"<!--<target>lightning__UtilityBar</target>",
+		"<target>lightning__FlowScreen</target>", 
+		"<target>lightning__Tab</target>", 
+		"<target>lightning__Inbox</target>", 
+		"<target>lightningCommunity__Page</target>", 
+		"<target>lightningCommunity__Default</target>", 
+		"<target>lightningSnapin__ChatMessage</target> -->",
+	"</targets>",           
+            "$2"
+        ],
+        "description": "LWC Target will Specifies where the component can be added. (ROY-LWC CodeMate)"
+	},
+	"roy.lwc.lms.pakage": {
+        "prefix": "roy.lwc.lms.pakage",
+        "body": ["<Package xmlns=\"http://soap.sforce.com/2006/04/metadata\">",
+		"  <types>",
+		"    <members>*</members>",
+		"    <name>LightningMessageChannel</name>",
+		"  </types>",
+		"  <version>47.0</version>",
+	    "</Package>",           
+            "$2"
+        ],
+        "description": "This is Used in Package.xml file for Lightning Message Service (LMS). (ROY-LWC CodeMate)"
+	},  
+	"roy.lwc.lms.message-channel": {
+        "prefix": "roy.lwc.lms.message-channel",
+        "body": ["<LightningMessageChannel xmlns=\"http://soap.sforce.com/2006/04/metadata\">",
+		"    <masterLabel>MyMessageChannel</masterLabel>",
+		"    <isExposed>true</isExposed>",
+		"    <description>This Lightning Message Channel sends information from VF to LWC</description>",
+	 
+		"   <lightningMessageFields>",
+		"     <fieldName>messageToSend</fieldName>",
+		"     <description>message To Send</description>",
+		"  </lightningMessageFields>",
+	 
+		"  <lightningMessageFields>",
+		"     <fieldName>sourceSystem</fieldName>",
+		"     <description>My source?</description>",
+		"  </lightningMessageFields>",
+	 
+	    "</LightningMessageChannel>",           
+            "$2"
+        ],
+        "description": "LWC Messaging Service Sample channel implementation in \"suffix .messageChannel-meta.xml\" file (LMS). (ROY-LWC CodeMate)"
+    }  
+}
+

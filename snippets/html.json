@@ -1,0 +1,1151 @@
+{
+		
+    "roy.lwc.accordion": {
+        "prefix": "roy.lwc.accordion",
+        "body": ["<lightning-accordion class=\"sample class name\" onsectiontoggle={handleToggleSection} active-section-name=\"Section_2\">",
+        "   <lightning-accordion-section name=\"Section_1\" label=\"Section 1 Title...\">",
+        "         <p>Section 1 content area...</p>",
+        "         <p>...</p>",
+        "         <p>...</p>",
+        "     </lightning-accordion-section>",
+        "     <lightning-accordion-section name=\"Section_2\" label=\"Section 2 Title...\">",
+        "         <p>Section 2 content area...</p>",
+        "         <p>...</p>",
+        "         <p>...</p>",
+        "     </lightning-accordion-section>",
+        "  </lightning-accordion>",
+            "$1"],
+        "description": "LWC Accordion Control. (ROY-LWC CodeMate)"
+    },
+    "roy.lwc.accordion-section": {
+        "prefix": "roy.lwc.accordion-section",
+        "body": [ "<lightning-accordion-section name=\"New_Section\" label=\"New Section Title...\">",
+        "         <p>New Section content area...</p>",
+        "         <p>...</p>",
+        "         <p>...</p>",
+        "</lightning-accordion-section>",     
+            "$1"],
+        "description": "LWC Accordion Section. (ROY-LWC CodeMate)"
+    },
+    "roy.lwc.avatar": {
+        "prefix": "roy.lwc.avatar",
+        "body": ["<lightning-avatar variant=\"circle\" src=\"https://www.lightningdesignsystem.com/assets/images/avatar2.jpg\"></lightning-avatar>",
+                 "  <!-- variant (circle,square) * initials (Sa,BW,WE) -->  ",
+            "$2"
+        ],
+        "description": "LWC Avatar Control. (ROY-LWC CodeMate)"
+    },
+    "roy.lwc.badge": {
+        "prefix": "roy.lwc.badge",
+        "body": ["<lightning-badge label=\"Badge 1\"></lightning-badge>",
+            "$2"
+        ],
+        "description": "LWC Badge Control. (ROY-LWC CodeMate)"
+    },
+    "roy.lwc.breadcrumbs": {
+        "prefix": "roy.lwc.breadcrumbs",
+        "body": ["<lightning-breadcrumbs>",
+        "   <lightning-breadcrumb",
+        "      label=\"Parent Account\"",
+        "      href=\"http://example.com/parent\">",
+        "  </lightning-breadcrumb>",
+        "  <lightning-breadcrumb",
+        "      label=\"Case\"",
+        "      href=\"http://example.com/case\">",
+        "  </lightning-breadcrumb>",
+        "</lightning-breadcrumbs>",
+            "$2"
+        ],
+        "description": "LWC Breadcrumbs Control. (ROY-LWC CodeMate)"
+    },
+    "roy.lwc.breadcrumb": {
+        "prefix": "roy.lwc.breadcrumb",
+        "body": ["    <lightning-breadcrumb",
+            "      label=\"Parent Account\"",
+            "      href=\"http://example.com/parent\">",
+            "    </lightning-breadcrumb>",
+            "    <lightning-breadcrumb",
+            "      label=\"Case\"",
+            "      href=\"http://example.com/case\">",
+            "    </lightning-breadcrumb>",
+            "$2"
+        ],
+        "description": "LWC Breadcrumbs Block. (ROY-LWC CodeMate)"
+    },
+    "roy.lwc.breadcrumb-with-click-event": {
+        "prefix": "roy.lwc.breadcrumb-with-click-event",
+        "body": ["    <lightning-breadcrumb",
+        "       label=\"Parent Account\"",
+        "       href=\"path/to/place/1\"",
+        "       onclick={handleNavigateToCustomPage1}>",
+        "    </lightning-breadcrumb>",
+        "    <lightning-breadcrumb",
+        "       label=\"Case\"",
+        "       href=\"path/to/place/2\"",
+        "       onclick={handleNavigateToCustomPage2}>",
+        "    </lightning-breadcrumb>",
+            "$2"
+        ],
+        "description": "LWC Breadcrumbs Block with Click Event. (ROY-LWC CodeMate)"
+    },
+    "roy.lwc.button": {
+        "prefix": "roy.lwc.button",
+        "body": ["<lightning-button variant=\"brand\" label=\"Brand\" title=\"Save\" onclick={handleClick} class=\"slds-m-left_x-small\"></lightning-button>",
+                 "  <!-- variant available (Neutral (Default), Base, Brand, Brand Outline, Destructive, Destructive Text, Success, inverse) -->  ",
+            "$2"
+        ],
+        "description": "LWC Button Control. (ROY-LWC CodeMate)"
+    },
+    "roy.lwc.button-menu": {
+        "prefix": "roy.lwc.button-menu",
+        "body": ["<lightning-button-menu alternative-text=\"Show menu\">",
+        "     <lightning-menu-item label=\"Menu Item One\" value=\"item1\"></lightning-menu-item>",
+        "     <lightning-menu-item label=\"Menu Item Two\" value=\"item2\"></lightning-menu-item>",
+        "     <lightning-menu-item label=\"Menu Item Three\" value=\"item3\"></lightning-menu-item>",
+        "</lightning-button-menu>",
+        "<!-- Use within <lightning-button-group> block -->",
+            "$2"
+        ],
+        "description": "LWC Button Menu Block (Use within <lightning-button-group> block). (ROY-LWC CodeMate)"
+    },
+    "roy.lwc.button-group": {
+        "prefix": "roy.lwc.button-group",
+        "body": ["<lightning-button-group>",
+        "    <lightning-button label=\"Refresh\"></lightning-button>",
+        "    <lightning-button label=\"Edit\"></lightning-button>",
+        "    <lightning-button label=\"Save\" icon-name=\"utility:save\"></lightning-button>",
+        "    <lightning-button label=\"Delete\" variant=\"destructive\" icon-name=\"utility:delete\"></lightning-button>",
+        "</lightning-button-group>",
+        " <!--  Button group have several button types (standard, icon, stateful, icon-stateful, menu).-->  ",
+            "$2"
+        ],
+        "description": "LWC Button Group Control. (ROY-LWC CodeMate)"
+    },
+    "roy.lwc.button-icon": {
+        "prefix": "roy.lwc.button-icon",
+        "body": ["<lightning-button-icon icon-name=\"utility:settings\"  alternative-text=\"Settings\"></lightning-button-icon>",
+                 "  <!-- variant attribute (border (Default), bare, container, border-filled)  -->  ",
+                 "  <!-- size attribute (xx-small, x-small, small, medium)  -->  ",
+            "$2"
+        ],
+        "description": "LWC Button Icons Control. (ROY-LWC CodeMate)"
+	},
+	"roy.lwc.button-icon-stateful": {
+        "prefix": "roy.lwc.button-icon-stateful",
+        "body": ["<lightning-button-icon-stateful icon-name=\"utility:like\" size=\"xx-small\" selected={likeStateSize01} onclick={handleLikeButtonSizeClick} alternative-text=\"Like\" data-button-number=\"01\"></lightning-button-icon-stateful>",
+                "  <!-- size attribute (xx-small, x-small, small, medium)  -->  ",
+            "$2"
+        ],
+        "description": "LWC Button Icon Statefull Control. (ROY-LWC CodeMate)"
+	},
+	"roy.lwc.button-menu-with-iterations": {
+        "prefix": "roy.lwc.button-menu-with-iterations",
+        "body": ["<lightning-button-menu alternative-text=\"Show menu\" variant=\"border-filled\" menu-alignment=\"auto\">",
+		"   <template for:each={myMenuItems} for:item=\"menuItem\">",
+		"       <lightning-menu-item",
+		"       key={menuItem.id}",
+		"       value={menuItem.value}",
+		"       label={menuItem.label}>",
+		"       </lightning-menu-item>",
+		"    </template>",
+	    "</lightning-button-menu>",
+            "$2"
+        ],
+        "description": "LWC Button menu with iterations Control. (ROY-LWC CodeMate)"
+	},
+	"roy.lwc.button-stateful": {
+        "prefix": "roy.lwc.button-stateful",
+        "body": ["<lightning-button-stateful",
+        "    label-when-off=\"Follow\"",
+        "    label-when-on=\"Following\"",
+        "    label-when-hover=\"Unfollow\"",
+        "    icon-name-when-off=\"utility:add\"",
+        "    icon-name-when-on=\"utility:check\"",
+        "    icon-name-when-hover=\"utility:close\"",
+        "    selected={isSelected}",
+        "    onclick={handleClick}>",
+    "</lightning-button-stateful>",
+            "$2"
+        ],
+        "description": "LWC Button Statefull Control. (ROY-LWC CodeMate)"
+	},
+	"roy.lwc.card": {
+        "prefix": "roy.lwc.card",
+        "body": ["<lightning-card  title=\"My Card\">",
+		"     <lightning-button label=\"New\" slot=\"actions\"></lightning-button>",
+		"        <p class=\"slds-p-horizontal_small\">Card Body (custom component)</p>",
+		"        <p slot=\"footer\">Card Footer</p>",
+		"</lightning-card>",
+            "$2"
+        ],
+        "description": "LWC Basic Card Control. (ROY-LWC CodeMate)"
+	},
+	"roy.lwc.card-with-layout": {
+        "prefix": "roy.lwc.card-with-layout",
+        "body": ["<lightning-card  title=\"My Card\">",
+		"    <lightning-button label=\"New\" slot=\"actions\"></lightning-button>",
+	    "         <lightning-layout>",
+		"             <lightning-layout-item padding=\"around-small\">",
+		"                <div class=\"header-column\">",
+	    "                   Content Here ... ",
+		"                </div>",
+		"             </lightning-layout-item>",
+	    "          </lightning-layout>",
+	    "     <p slot=\"footer\">Lightning Card Footer</p>",
+        "</lightning-card>",
+            "$2"
+        ],
+        "description": "LWC Card Control with Layout. (ROY-LWC CodeMate)"
+	},
+	"roy.lwc.carousel": {
+        "prefix": "roy.lwc.carousel",
+        "body": ["<lightning-carousel>",
+		"     <lightning-carousel-image",
+		"          src = \"https://www.lightningdesignsystem.com/assets/images/carousel/carousel-01.jpg\"",
+		"          header = \"First Card\"",
+		"          description = \"First card description.\"",
+		"          alternative-text = \"First card accessible description.\"",
+		"          href = \"https://www.salesforce.com\">",
+	    "     </lightning-carousel-image>",
+	    "     <lightning-carousel-image",
+		"          src = \"https://www.lightningdesignsystem.com/assets/images/carousel/carousel-02.jpg\"",
+		"          header = \"Second Card\"",
+		"          description = \"Second card description.\"",
+		"          alternative-text = \"Second card accessible description.\"",
+		"          href = \"https://www.salesforce.com\">",
+		"     </lightning-carousel-image>",
+	    "</lightning-carousel>",
+            "$2"
+        ],
+        "description": "LWC Carousel Control. (ROY-LWC CodeMate)"
+	},
+	"roy.lwc.checkbox-group": {
+        "prefix": "roy.lwc.checkbox-group",
+        "body": ["<lightning-checkbox-group name=\"Checkbox Group\"",
+		"                                   label=\"Checkbox Group\"",
+		"                                   options={options}",
+		"                                   value={value}",
+		"                                   onchange={handleChange}></lightning-checkbox-group>",
+            "$2"
+        ],
+        "description": "LWC Checkbox Group Control. (ROY-LWC CodeMate)"
+	},
+	"roy.lwc.click-to-dial": {
+        "prefix": "roy.lwc.click-to-dial",
+        "body": ["<lightning-button label=\"onClickToDial\" onclick={onClickToDial}></lightning-button>",
+		"<p><lightning-click-to-dial value=\"14155555554\"></lightning-click-to-dial></p>",
+		"<p><lightning-click-to-dial value=\"14155555555\" record-id=\"5003000000D8cuI\" params=\"accountSid=xxx, sourceId=xxx, apiVersion=123\"></lightning-click-to-dial></p>",
+            "$2"
+        ],
+        "description": "LWC click-to-dial Control with onclick Dial. (ROY-LWC CodeMate)"
+	},
+	"roy.lwc.combobox": {
+        "prefix": "roy.lwc.combobox",
+        "body": ["<lightning-combobox",
+		"               name=\"progress\"",
+		"               label=\"Status\"",
+		"               value={value}",
+		"               placeholder=\"Select Progress\"",
+		"               options={options}",
+		"               onchange={handleChange} ></lightning-combobox>",
+	
+		"$2"
+        ],
+        "description": "LWC combobox Control. (ROY-LWC CodeMate)"
+	},
+	"roy.lwc.datatable": {
+        "prefix": "roy.lwc.datatable",
+        "body": ["<lightning-datatable",
+		"        key-field=id",
+		"        data={data}",
+		"        columns={columns}",
+		"        onrowaction={handleRowAction}>",
+	"</lightning-datatable>",	
+		"$2"
+        ],
+        "description": "LWC datatable Control with Row Action. (ROY-LWC CodeMate)"
+	},
+	"roy.lwc.dual-listbox": {
+        "prefix": "roy.lwc.dual-listbox",
+        "body": ["<lightning-dual-listbox id=\"selectOptions\"",
+		"      name=\"Select Options\"",
+		"      label=\"Select Options\"",
+		"      source-label=\"Available Options\"",
+		"      selected-label=\"Selected Options\"",
+		"      field-level-help=\"Select your Country\"",
+		"      options={listOptions}",
+		"      value={defaultOptions}",
+		"      required-options={requiredOptions}",
+		"      onchange={handleChange}>",
+		"</lightning-dual-listbox>",	
+		"$2"
+        ],
+        "description": "LWC dual-listbox Control. (ROY-LWC CodeMate)"
+	},
+	"roy.lwc.dynamic-icon": {
+        "prefix": "roy.lwc.dynamic-icon",
+        "body": ["<lightning-dynamic-icon",
+        "    type=\"waffle\"", 
+        "    alternative-text=\"Application launcher\">",
+		"</lightning-dynamic-icon>",
+		"  <!-- type attribute (ellie,eq,score,strength,trend,waffle)  -->  ",	
+		"$2"
+        ],
+        "description": "LWC dynamic-icon Control. (ROY-LWC CodeMate)"
+	},
+	"roy.lwc.file-upload": {
+        "prefix": "roy.lwc.file-upload",
+        "body": ["<lightning-file-upload",
+		"     label=\"Attach receipt\"",
+		"     name=\"fileUploader\"",
+		"     accept={acceptedFormats}",
+		"     record-id={myRecordId}",
+		"     onuploadfinished={handleUploadFinished}",
+		"     multiple>",
+        "</lightning-file-upload>",	
+		"$2"
+        ],
+        "description": "LWC File-Upload Control. (ROY-LWC CodeMate)"
+	},
+	"roy.lwc.target": {
+        "prefix": "roy.lwc.target",
+        "body": ["<targets>",
+        "     <target>lightning__FlowScreen</target>",
+        "</targets>",
+
+        "<targetConfigs>",
+        "    <targetConfig targets=\"lightning__FlowScreen\">",
+        "          <property name=\"todos\" type=\"String[]\" label=\"Todos\" description=\"list of todos\"/>",
+        "    </targetConfig>",
+		"</targetConfigs>",	
+        "  <!-- This is supported only in components where the target is lightning__FlowScreen, lightning__AppPage, lightning__HomePage",
+        "   lightning__RecordPage, lightning__Tab, lightningCommunity__Page, lightningCommunity__Default, lightningSnapin__ChatMessag, etc. -->  ",	
+		"$2"
+        ],
+        "description": "LWC target Event Block that can specifies where the component can be added. (ROY-LWC CodeMate)"
+	},
+	"roy.lwc.formatted-address": {
+        "prefix": "roy.lwc.formatted-address",
+        "body": ["<lightning-formatted-address",
+        "      street=\"Central Park St.\"",
+        "      city=\"KALYANI\"",
+        "      country=\"IN\"",
+        "      province=\"ASIA\"",
+		"      postal-code=\"741235\">",
+		"</lightning-formatted-address>",	
+		"$2"
+        ],
+        "description": "LWC Formatted Address Control. (ROY-LWC CodeMate)"
+	},	
+	"roy.lwc.formatted-date-time": {
+        "prefix": "roy.lwc.formatted-date-time",
+		"body": ["<lightning-formatted-date-time",
+			 "     value=\"1547250828000\"",
+			 "     year=\"numeric\"",
+			 "     month=\"numeric\"",
+			 "     day=\"numeric\"",
+			 "     hour=\"2-digit\"",
+			 "     minute=\"2-digit\"",
+			 "     time-zone=\"UTC\"",
+			 "     time-zone-name=\"short\"",
+			 "     hour12=\"false\">",
+			 "</lightning-formatted-date-time>",	
+		"$2"
+        ],
+        "description": "LWC Formatted Date-Time Control. (ROY-LWC CodeMate)"
+	},
+	"roy.lwc.formatted-email": {
+        "prefix": "roy.lwc.formatted-email",
+        "body": ["<lightning-formatted-email value=\"email@example.com\" label=\"example email\" onclick={handleClick}></lightning-formatted-email>",
+		"$2"
+        ],
+        "description": "LWC Formatted Email Control. (ROY-LWC CodeMate)"
+	},	
+	"roy.lwc.formatted-location": {
+        "prefix": "roy.lwc.formatted-location",
+        "body": ["<lightning-formatted-location latitude=\"22\" longitude=\"122.2222\"></lightning-formatted-location>",
+		"$2"
+        ],
+        "description": "LWC Formatted Location Control. (ROY-LWC CodeMate)"
+	},	
+	"roy.lwc.formatted-name": {
+        "prefix": "roy.lwc.formatted-name",
+        "body": ["<lightning-formatted-name",
+		"    first-name=\"John\"",
+		"    last-name=\"Doe\"",
+		"    middle-name=\"Middleton\"",
+		"    informal-name=\"Jo\"",
+		"    suffix=\"The 3rd\"",
+		"    salutation=\"Mr.\">",
+        "</lightning-formatted-name>",
+		"$2"
+        ],
+        "description": "LWC Formatted Name Control. (ROY-LWC CodeMate)"
+	},
+	"roy.lwc.formatted-number": {
+        "prefix": "roy.lwc.formatted-number",
+        "body": ["<lightning-formatted-number value=\"12.34\" format-style=\"decimal\" minimum-integer-digits=\"5\"></lightning-formatted-number>",
+		"$2"
+        ],
+        "description": "LWC Formatted Number Control. (ROY-LWC CodeMate)"
+	},
+	"roy.lwc.formatted-phone": {
+        "prefix": "roy.lwc.formatted-phone",
+        "body": ["<lightning-formatted-phone value=\"+18005551212\" ></lightning-formatted-phone>",
+		"$2"
+        ],
+        "description": "LWC Formatted Phone Control. (ROY-LWC CodeMate)"
+	},
+	"roy.lwc.formatted-input-rich-text": {
+        "prefix": "roy.lwc.formatted-input-rich-text",
+        "body": ["<lightning-input-rich-text",
+        "     value={richtext}",
+		"     onchange={handleChange}>",
+		"     </lightning-input-rich-text>",
+		"$2"
+        ],
+        "description": "LWC Formatted Input-Rich-Text Control. (ROY-LWC CodeMate)"
+    },
+    "roy.lwc.formatted-text": {
+        "prefix": "roy.lwc.formatted-text",
+        "body": ["<lightning-formatted-text",
+        "         value=\"I like salesforce.com and trailhead.salesforce.com.\" linkify>",
+        "</lightning-formatted-text>",
+        "$2"
+        ],
+        "description": "LWC Formatted Text Control. (ROY-LWC CodeMate)"
+    },
+    "roy.lwc.formatted-time": {
+        "prefix": "roy.lwc.formatted-time",
+        "body": ["<lightning-formatted-time value=\"22:12:30.999\"></lightning-formatted-time>",
+        "$2"
+        ],
+        "description": "LWC Formatted Time Control. (ROY-LWC CodeMate)"
+    },
+    "roy.lwc.formatted-url": {
+        "prefix": "roy.lwc.formatted-url",
+        "body": ["<lightning-formatted-url value=\"https://my/path\" tooltip=\"Go to https://my/path\" label=\"My Cool Website\" target=\"_blank\" ></lightning-formatted-url>",
+        "$2"
+        ],
+        "description": "LWC Formatted URL Control. (ROY-LWC CodeMate)"
+    },
+    "roy.lwc.helptext": {
+        "prefix": "roy.lwc.helptext",
+        "body": ["<lightning-helptext",
+        "       content=\"Your email address will be your login name\">",
+        "</lightning-helptext>",
+        "$2"
+        ],
+        "description": "LWC Helptext Control. (ROY-LWC CodeMate)"
+    },
+    "roy.lwc.icon": {
+        "prefix": "roy.lwc.icon",
+        "body": ["<lightning-icon",
+        "       icon-name=\"utility:error\"",
+        "       size=\"large\"",
+        "       alternative-text=\"Indicates error\"",
+        "       variant=\"error\">",
+        "</lightning-icon>",
+        "$2"
+        ],
+        "description": "LWC Icon Control. (ROY-LWC CodeMate)"
+    },    
+    "roy.lwc.input": {
+        "prefix": "roy.lwc.input",
+        "body": ["<lightning-input type=\"date\" name=\"input1\" label=\"Enter a date\" ></lightning-input>",
+            "<!-- type in (date, datetime, time, color, file,c text, email,",
+            "password, url, number, checkbox, checkbox-button, toggle, search, tel) -->",
+            "$2"
+        ],
+        "description": "LWC input Control. (ROY-LWC CodeMate)"
+    },  
+    "roy.lwc.input-fileType-with-filter": {
+        "prefix": "roy.lwc.input-fileType-with-filter",
+        "body": ["<lightning-input type=\"file\"",
+        "       label=\"Attachment\"",
+        "       accept=\"image/png, .zip\"",
+        "       onchange={handleFilesChange}",
+        "       multiple>",
+        "</lightning-input>",
+ 
+        "  <!-- File input fields support upload of single or multiple files and can restrict the accepted file types. -->  ", 
+        "$2"
+        ],
+        "description": "LWC input file control with file type filter Control. (ROY-LWC CodeMate)"
+    },
+    "roy.lwc.input-search": {
+        "prefix": "roy.lwc.input-search",
+        "body": ["<lightning-input type=\"search\"",
+        "       label=\"Search\"",
+        "       is-loading>",
+        "</lightning-input>",
+            "$2"
+        ],
+        "description": "LWC input search Control. (ROY-LWC CodeMate)"
+    },
+    "roy.lwc.input-tel": {
+        "prefix": "roy.lwc.input-tel",
+        "body": ["<lightning-input type=\"tel\"",
+        "             label=\"Telephone\"",
+        "             value=\"343-343-3434\"",
+        "             pattern=\"[0-9]{3}-[0-9]{3}-[0-9]{4}\">",
+        "</lightning-input>",
+            "$2"
+        ],
+        "description": "LWC input Formatted Telephone No Control. (ROY-LWC CodeMate)"
+    },  
+    "roy.lwc.input-address": {
+        "prefix": "roy.lwc.input-address",
+        "body": ["<lightning-input-address",
+        "          address-label=\"Address\"",
+        "          street-label=\"Street\"",
+        "          city-label=\"City\"",
+        "          country-label=\"Country\"",
+        "          province-label=\"Province\"",
+        "          postal-code-label=\"PostalCode\"",
+        "          street=\"Central Park St.\"",
+        "          city=\"Kalyani\"",
+        "          country=\"IN\"",
+        "          province=\"WB\"",
+        "          postal-code=\"741235\"",
+        "          required",
+        "          field-level-help=\"Help Text for inputAddress field...\">",
+        "          </lightning-input-address>",
+            "$2"
+        ],
+        "description": "LWC input Address Control. (ROY-LWC CodeMate)"
+    },  
+    "roy.lwc.input-address-with-country": {
+        "prefix": "roy.lwc.input-address-with-country",
+        "body": ["<lightning-input-address",
+            "          address-label=\"Address\"",
+            "          street-label=\"Street\"",
+            "          city-label=\"City\"",
+            "          country-label=\"Country\"",
+            "          province-label=\"Province\"",
+            "          postal-code-label=\"PostalCode\"",
+            "          street=\"Central Park St.\"",
+            "          city=\"Kalyani\"",
+            "          country=\"IN\"",
+            "          province=\"WB\"",
+            "          postal-code=\"741235\"",
+            "          field-level-help=\"Help Text for inputAddress field...\">",
+            "          country-options={getCountryOptions}",
+            "          province-options={getProvinceOptions}",
+            "          onchange={handleChange} ></lightning-input-address>",
+            "</lightning-input-address>",
+            "$2"
+        ],
+        "description": "LWC input Address Control with predefined lists of states (province) and countries options. (ROY-LWC CodeMate)"
+    },   
+    "roy.lwc.input-field": {
+        "prefix": "roy.lwc.input-field",
+        "body": ["<lightning-input-field field-name=\"FirstName\"></lightning-input-field>",
+        "    <!-- only supported within <lightning-record-edit-form/> -->",
+            "$2"
+        ],
+        "description": "LWC input-field Control. (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.input-location": {
+        "prefix": "roy.lwc.input-location",
+        "body": ["<lightning-input-location label=\"Default coordinates\" latitude=\"-15.1234\" longitude=\"99.5517\"></lightning-input-location>",
+            "$2"
+        ],
+        "description": "LWC input-location Control. (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.input-name": {
+        "prefix": "roy.lwc.input-name",
+        "body": ["<lightning-input-name",
+        "        label=\"Default Input Name Field\"",
+        "        first-name=\"John\"",
+        "        middle-name=\"Middleton\"",
+        "        last-name=\"Doe\"",
+        "        informal-name=\"Jo\"",
+        "        suffix=\"The 3rd\"",
+        "        salutation=\"Mr.\"",
+        "        options={salutationOptions} ></lightning-input-name>",
+            "$2"
+        ],
+        "description": "LWC input-location Control. (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.input-rich-text": {
+        "prefix": "roy.lwc.input-rich-text",
+        "body": ["<lightning-input-rich-text",
+        "      value={myVal}>",
+        "</lightning-input-rich-text>",
+            "$2"
+        ],
+        "description": "LWC input-rich-text Control. (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.layout": {
+        "prefix": "roy.lwc.layout",
+        "body": ["<lightning-layout>",
+        "      <lightning-layout-item padding=\"around-small\">",
+        "          <div class=\"header-column\">",
+        "             Content Here !",
+        "          </div>",
+        "      </lightning-layout-item>",
+        "</lightning-layout>",
+        "<!-- Usage Considerations: lightning-layout is not supported in Microsoft Edge and IE11.",
+        "To create a flexible grid system for these browsers, use <div> containers with SLDS grid classes. -->",
+            "$2"
+        ],
+        "description": "LWC layout Control. (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.layout-item": {
+        "prefix": "roy.lwc.layout-item",
+        "body": ["<lightning-layout-item padding=\"around-small\">",
+        "          <div class=\"header-column\">",
+        "             Content Here !",
+        "          </div>",
+        "      </lightning-layout-item>",
+        "<!-- Use with in <lightning-layout> Control. -->",
+           "$2"
+        
+        ],
+        "description": "LWC layout item Block. (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.map": {
+        "prefix": "roy.lwc.map",
+        "body": ["<lightning-map",
+	    "        map-markers={mapMarkers}>",
+        "</lightning-map>",
+        "<!-- You can specify a maximum of 10 geocoded address lookups per map -->",
+           "$2"
+        
+        ],
+        "description": "LWC Map Control. (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.menu-item": {
+        "prefix": "roy.lwc.menu-item",
+        "body": ["<lightning-menu-item",
+        "      label=\"Menu Item 1\"",
+        "      value=\"menuitem1\"",
+        "      icon-name= \"utility:table\">",
+        "</lightning-menu-item>",
+        "<!-- Use with in <lightning-button-menu> Control -->",
+           "$2"
+        
+        ],
+        "description": "LWC map Control. (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.output-field": {
+        "prefix": "roy.lwc.output-field",
+        "body": ["<lightning-output-field field-name=\"Name\"></lightning-output-field>",
+        "    <!-- only supported within <lightning-record-edit-form/>  -->",
+            "$2"
+        ],
+        "description": "LWC output-field Control. (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.pill": {
+        "prefix": "roy.lwc.pill",
+        "body": ["<lightning-pill label=\"With both remove and click handlers\" onremove={handleRemove} onclick={handleClick}></lightning-pill>",
+            "$2"
+        ],
+        "description": "LWC Pill Control. (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.pill-container": {
+        "prefix": "roy.lwc.pill-container",
+        "body": ["<lightning-pill-container items={items} ></lightning-pill-container>",
+            "$2"
+        ],
+        "description": "LWC pill-container Control. (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.progress-bar": {
+        "prefix": "roy.lwc.progress-bar",
+        "body": ["<lightning-progress-bar value=\"60\" size=\"large\"></lightning-progress-bar>",
+            "$2"
+        ],
+        "description": "LWC Progress-bar Control. (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.progress-indicator": {
+        "prefix": "roy.lwc.progress-indicator",
+        "body": ["<lightning-progress-indicator current-step=\"3\" type=\"base\" has-error=\"true\" variant=\"base\">",
+        "        <lightning-progress-step label=\"Step 1\" value=\"1\"></lightning-progress-step>",
+        "        <lightning-progress-step label=\"Step 2\" value=\"2\"></lightning-progress-step>",
+        "        <lightning-progress-step label=\"Step 3\" value=\"3\"></lightning-progress-step>",
+        "        <lightning-progress-step label=\"Step 4\" value=\"4\"></lightning-progress-step>",
+        "</lightning-progress-indicator>",
+            "$2"
+        ],
+        "description": "LWC Progress-indicator Control. (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.progress-indicator-with-iteration": {
+        "prefix": "roy.lwc.progress-indicator-with-iteration",
+        "body": ["<lightning-progress-indicator current-step=\"step-3\" type=\"path\" variant=\"base\">",
+        "         <template for:each={steps} for:item=\"step\">",
+        "             <lightning-progress-step label={step.label} value={step.value} key={step.label}></lightning-progress-step>",
+        "         </template>",
+        "</lightning-progress-indicator>",
+            "$2"
+        ],
+        "description": "LWC Progress-indicator with iteration Control. (ROY-LWC CodeMate)"
+    },
+    "roy.lwc.radio-group": {
+        "prefix": "roy.lwc.radio-group",
+        "body": ["<lightning-radio-group name=\"radioGroup\"",
+        "          label=\"Radio Group\"",
+        "          options={options}",
+        "          value={value}",
+        "          type=\"radio\"></lightning-radio-group>",
+        "             <!-- \"type\" can be \"button\" -->",
+            "$2"
+        ],
+        "description": "LWC Radio-group Control. (ROY-LWC CodeMate)"
+    },  
+    "roy.lwc.record-edit-form": {
+        "prefix": "roy.lwc.record-edit-form",
+        "body": ["<lightning-record-edit-form record-id=\"003XXXXXXXXXXXXXXX\"",
+        "                object-api-name=\"Contact\">",
+        "                <lightning-messages>",
+        "                </lightning-messages>",
+        "                <lightning-output-field field-name=\"AccountId\">",
+        "                </lightning-output-field>",
+        "                <lightning-input-field field-name=\"FirstName\">",
+        "                </lightning-input-field>",
+        "                <lightning-input-field field-name=\"LastName\">",
+        "                </lightning-input-field>",
+        "                <lightning-input-field field-name=\"Email\">",
+        "                </lightning-input-field>",
+        "                <lightning-button",
+        "                class=\"slds-m-top_small\"",
+        "                variant=\"brand\"",
+        "                type=\"submit\"",
+        "                name=\"update\"",
+        "                label=\"Update\">",
+        "                </lightning-button>",
+        "</lightning-record-edit-form>",
+            "$2"
+        ],
+        "description": "LWC Record Edit Form Control. (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.record-form": {
+        "prefix": "roy.lwc.record-form",
+        "body": ["<lightning-record-form",
+        "        record-id=\"001XXXXXXXXXXXXXXX\"",
+        "        object-api-name=\"Account\"",
+        "        layout-type=\"Full\"",
+        "        mode=\"view\">",
+        "</lightning-record-form>",
+        "     <!-- \"mode\" can be \"view, readonly, edit\"  -->",
+            "$2"
+        ],
+        "description": "LWC Record Form Control. (ROY-LWC CodeMate)"
+    },
+    "roy.lwc.record-view-form": {
+        "prefix": "roy.lwc.record-view-form",
+        "body": ["<lightning-record-view-form",
+        "          record-id=\"001XXXXXXXXXXXXXXX\"",
+        "          object-api-name=\"My_Contact__c\">",
+        "          <div class=\"slds-box\">",
+        "             <lightning-output-field field-name=\"Name\">",
+        "             </lightning-output-field>",
+        "             <lightning-output-field field-name=\"Email__c\">",
+        "             </lightning-output-field>",
+        "         </div>",
+        "</lightning-record-view-form>",
+            "$2"
+        ],
+        "description": "LWC Record Form Control. (ROY-LWC CodeMate)"
+    },   
+    "roy.lwc.relative-date-time": {
+        "prefix": "roy.lwc.relative-date-time",
+        "body": ["<lightning-relative-date-time value={now}></lightning-relative-date-time>",
+            "$2"
+        ],
+        "description": "LWC Relative Date-Time Control. (ROY-LWC CodeMate)"
+    },  
+    "roy.lwc.slider": {
+        "prefix": "roy.lwc.slider",
+        "body": ["<lightning-slider label=\"Volume\" value={val}></lightning-slider>",
+            "$2"
+        ],
+        "description": "LWC Slider Control. (ROY-LWC CodeMate)"
+    },  
+    "roy.lwc.spinner": {
+        "prefix": "roy.lwc.spinner",
+        "body": ["<lightning-spinner alternative-text=\"Loading\" size=\"small\"></lightning-spinner>",
+            "  <!-- size attribute can be (small, medium, large) -->  ",
+            "$2"
+        ],
+        "description": "LWC Spinner Control. (ROY-LWC CodeMate)"
+    },  
+    "roy.lwc.tabset": {
+        "prefix": "roy.lwc.tabset",
+        "body": ["<lightning-tabset>",
+        "      <lightning-tab label=\"Item One\">",
+        "            Content for tab 1",
+        "      </lightning-tab>",
+        "      <template if:true={showTabTwo}>",
+        "      <lightning-tab label=\"Item Two\">",
+        "            Content for tab 2",
+        "      </lightning-tab>",
+        "      </template>",
+        "</lightning-tabset>",
+            "$2"
+        ],
+        "description": "LWC tabset Control. (ROY-LWC CodeMate)"
+    },  
+    "roy.lwc.tab": {
+        "prefix": "roy.lwc.tab",
+        "body": ["<lightning-tab label=\"Item One\">",
+        "        One Content !",
+        "</lightning-tab>",
+            "$2"
+        ],
+        "description": "LWC tab Block for TabSet. (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.textarea": {
+        "prefix": "roy.lwc.textarea",
+        "body": ["<lightning-textarea name=\"input1\" label=\"Enter some text...\" ></lightning-textarea>",
+            "$2"
+        ],
+        "description": "LWC Tab Control. (ROY-LWC CodeMate)"
+    },      
+    "roy.lwc.tile": {
+        "prefix": "roy.lwc.tile",
+        "body": ["<lightning-tile",
+        "       label=\"Lightning component team\"",
+        "       href=\"/path/to/somewhere\">",
+        "       <p class=\"slds-truncate\" title=\"7 Members\">7 Members</p>",
+        "</lightning-tile>",
+            "$2"
+        ],
+        "description": "LWC Tile Control. (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.tile-with-actionList-dropdown": {
+        "prefix": "roy.lwc.tile-with-actionList-dropdown",
+        "body": ["<lightning-tile",
+        "      label=\"My Open Cases\"",
+        "      href=\"/path/to/my-open-cases\"",
+        "      actions={actions}",
+        "      onactiontriggered={handleAction}>",
+        "      <p class=\"slds-truncate\" title=\"10 Cases\">10 Cases</p>",
+        "</lightning-tile>",
+            "$2"
+        ],
+        "description": "LWC Tile Control With ActionList as Dropdown. (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.tree ": {
+        "prefix": "roy.lwc.tree",
+        "body": ["<lightning-tree items={items} header=\"Roles\"></lightning-tree>",
+            "<!-- \"items\" represents here Object (Nested items as an array of key-value pairs.) -->",
+            "$2"
+        ],
+        "description": "LWC Tree Control. (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.tree-with-action": {
+        "prefix": "roy.lwc.tree-with-action",
+        "body": ["<lightning-tree",
+        "       items={treeList}",
+        "       onselect={handleSelect}>",
+        "</lightning-tree>",
+        "<!-- \"items\" represents here Object (Nested items as an array of key-value pairs.) -->",
+            "$2"
+        ],
+        "description": "LWC Tree Control with Action Event. (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.tree-grid": {
+        "prefix": "roy.lwc.tree-grid",
+        "body": ["<lightning-tree-grid",
+        "       columns={gridColumns}",
+        "       data={gridData}",
+        "       key-field=\"name\">",
+        "</lightning-tree-grid>",
+            "$2"
+        ],
+        "description": "LWC Tree Grid Control. (ROY-LWC CodeMate)"
+    },
+    "roy.lwc.vertical-navigation": {
+        "prefix": "roy.lwc.vertical-navigation",
+        "body": ["<lightning-vertical-navigation>",
+        "    <lightning-vertical-navigation-section label=\"Reports\">",
+        "       <lightning-vertical-navigation-item label=\"Recent\" name=\"recent\" ></lightning-vertical-navigation-item>",
+        "       <lightning-vertical-navigation-item label=\"Created by Me\" name=\"created\" ></lightning-vertical-navigation-item>",
+        "       <lightning-vertical-navigation-item label=\"Private Reports\" name=\"private\" ></lightning-vertical-navigation-item>",
+        "       <lightning-vertical-navigation-item label=\"Public Reports\" name=\"public\" ></lightning-vertical-navigation-item>",
+        "       <lightning-vertical-navigation-item label=\"All Reports\" name=\"all\" ></lightning-vertical-navigation-item>",
+        "    </lightning-vertical-navigation-section>",
+    "</lightning-vertical-navigation>",
+            "$2"
+        ],
+        "description": "LWC Vertical Navigation Control. (ROY-LWC CodeMate)"
+    },
+    "roy.lwc.vertical-navigation-with-action": {
+        "prefix": "roy.lwc.vertical-navigation-with-action",
+        "body": ["<lightning-vertical-navigation onselect={handleSelect} selected-item=\"recent\">",
+        "    <lightning-vertical-navigation-section label=\"Reports\">",
+        "       <lightning-vertical-navigation-item label=\"Recent\" name=\"recent\" ></lightning-vertical-navigation-item>",
+        "       <lightning-vertical-navigation-item label=\"Created by Me\" name=\"created\" ></lightning-vertical-navigation-item>",
+        "       <lightning-vertical-navigation-item label=\"All Reports\" name=\"all\" ></lightning-vertical-navigation-item>",
+        "    </lightning-vertical-navigation-section>",
+    "</lightning-vertical-navigation>",
+            "$2"
+        ],
+        "description": "LWC Vertical Navigation Control with \"onselect\" Event. (ROY-LWC CodeMate)"
+    },  
+    "roy.lwc.vertical-navigation-item": {
+        "prefix": "roy.lwc.vertical-navigation-item",
+        "body": ["<lightning-vertical-navigation-item label=\"Created by Me\" name=\"created\"></lightning-vertical-navigation-item>",
+           
+            "$2"
+        ],
+        "description": "LWC Vertical Navigation Item Block (Use in <lightning-vertical-navigation> Control). (ROY-LWC CodeMate)"
+    },  
+    "roy.lwc.vertical-navigation-item-badge": {
+        "prefix": "roy.lwc.vertical-navigation-item-badge",
+        "body": ["<lightning-vertical-navigation-item-badge label=\"Recent\"",
+            "      name=\"recent\"",
+            "      badge-count=\"3\">",
+            "</lightning-vertical-navigation-item-badge>",
+           
+            "$2"
+        ],
+        "description": "LWC Vertical Navigation Item Badge (Use in <lightning-vertical-navigation> Control). (ROY-LWC CodeMate)"
+    },  
+    "roy.lwc.vertical-navigation-item-icon": {
+        "prefix": "roy.lwc.vertical-navigation-item-icon",
+        "body": ["<lightning-vertical-navigation-item-icon",
+        "      label=\"Created by Me\"",
+        "      name=\"reports_usercreated\"",
+        "      icon-name=\"utility:user\">",
+        "</lightning-vertical-navigation-item-icon>",
+           
+            "$2"
+        ],
+        "description": "LWC Vertical Navigation Item Icon (Use in <lightning-vertical-navigation> Control). (ROY-LWC CodeMate)"
+    },  
+    "roy.lwc.for-each-iteration": {
+        "prefix": "roy.lwc.vertical-navigation-item-icon",
+        "body": ["<template for:each={acc.Contacts} for:item=\"con\">",
+         "    <li key={con.Id}>{con.Name}</li>",
+         "</template>",
+           
+            "$2"
+        ],
+        "description": "LWC Vertical Navigation Item Icon (Use in <lightning-vertical-navigation> Control). (ROY-LWC CodeMate)"
+    },  
+
+  
+   
+
+    "roy.lwc.utl.slds-border": {
+        "prefix": "roy.lwc.utl.slds-border",
+        "body": ["slds-border_top",
+           
+            "$2"
+        ],
+        "description": "LWC Utility Border Class. Variant (top,right,bottom,left). (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.utl.slds-box_small": {
+        "prefix": "roy.lwc.utl.slds-box_small",
+        "body": ["slds-box slds-box_small",
+           
+            "$2"
+        ],
+        "description": "LWC Utility Box Class. Variant (small,x-small,xx-small). (ROY-LWC CodeMate)"
+    },  
+    "roy.lwc.utl.slds-dl_inline": {
+        "prefix": "roy.lwc.utl.slds-dl_inline",
+        "body": ["slds-dl_inline",
+           
+            "$2"
+        ],
+        "description": "LWC Utility Description List Class. Use in <dl/>. (ROY-LWC CodeMate)"
+    },  
+    "roy.lwc.utl.slds-dl_inline__label": {
+        "prefix": "roy.lwc.utl.slds-dl_inline__label",
+        "body": ["slds-dl_inline__label",
+           
+            "$2"
+        ],
+        "description": "LWC Utility Description List Class. Use in </dt>. (ROY-LWC CodeMate)"
+    },  
+    "roy.lwc.utl.slds-dl_inline__detail": {
+        "prefix": "roy.lwc.utl.slds-dl_inline__detail",
+        "body": ["slds-dl_inline__detail",
+           
+            "$2"
+        ],
+        "description": "LWC Utility Description List Class. Use in </dd>. (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.utl.slds-region_narrow": {
+        "prefix": "roy.lwc.utl.slds-region_narrow",
+        "body": ["slds-region_narrow",
+           
+            "$2"
+        ],
+        "description": "LWC Utility Description List Class. Use in </div>. (ROY-LWC CodeMate)"
+    },
+    "roy.lwc.utl.slds-dl_horizontal": {
+        "prefix": "roy.lwc.utl.slds-dl_horizontal",
+        "body": ["slds-dl_horizontal",
+           
+            "$2"
+        ],
+        "description": "LWC Utility Description List Class. Use in <dl/>. (ROY-LWC CodeMate)"
+    },  
+    "roy.lwc.utl.slds-dl_horizontal__label": {
+        "prefix": "roy.lwc.utl.slds-dl_horizontal__label",
+        "body": ["slds-dl_horizontal__label",
+           
+            "$2"
+        ],
+        "description": "LWC Utility Description List Class. Use in </dt>. (ROY-LWC CodeMate)"
+    },  
+    "roy.lwc.utl.slds-dl_horizontal__detail": {
+        "prefix": "roy.lwc.utl.slds-dl_horizontal__detail",
+        "body": ["slds-dl_horizontal__detail",
+           
+            "$2"
+        ],
+        "description": "LWC Utility Description List Class. Use in </dd>. (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.utl.slds-float": {
+        "prefix": "roy.lwc.utl.slds-float",
+        "body": ["slds-float_left",
+           
+            "$2"
+        ],
+        "description": "LWC Utility Floats Class. Variant (left, right, none). (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.utl.slds-clearfix": {
+        "prefix": "roy.lwc.utl.slds-clearfix",
+        "body": ["slds-clearfix",
+           
+            "$2"
+        ],
+        "description": "LWC Utility Floats Class. (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.utl.slds-hyphenate": {
+        "prefix": "roy.lwc.utl.slds-hyphenate",
+        "body": ["slds-hyphenate",
+           
+            "$2"
+        ],
+        "description": "LWC Utility Hyphenation Class. (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.utl.slds-card": {
+        "prefix": "roy.lwc.utl.slds-card",
+        "body": ["slds-card",
+           
+            "$2"
+        ],
+        "description": "LWC Utility Layout Class. (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.utl.slds-p-around_medium": {
+        "prefix": "roy.lwc.utl.slds-p-around_medium",
+        "body": ["slds-p-around_medium",
+           
+            "$2"
+        ],
+        "description": "LWC Utility Layout Class. (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.utl.slds-has-bottom-magnet": {
+        "prefix": "roy.lwc.utl.slds-has-bottom-magnet",
+        "body": ["slds-has-bottom-magnet",
+           
+            "$2"
+        ],
+        "description": "LWC Utility Layout Class. (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.utl.slds-m-top_none": {
+        "prefix": "roy.lwc.utl.slds-m-top_none",
+        "body": ["slds-m-top_none",
+           
+            "$2"
+        ],
+        "description": "LWC Utility Margin Class. (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.utl.slds-m-left_xx-small": {
+        "prefix": "roy.lwc.utl.slds-m-left_xx-small",
+        "body": ["slds-m-left_xx-small",
+           
+            "$2"
+        ],
+        "description": "LWC Utility Margin Class. (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.utl.slds-p-top_none": {
+        "prefix": "roy.lwc.utl.slds-p-top_none",
+        "body": ["slds-p-top_none",
+           
+            "$2"
+        ],
+        "description": "LWC Utility Padding Class. (ROY-LWC CodeMate)"
+    },  
+    "roy.lwc.utl.slds-p-left_medium": {
+        "prefix": "roy.lwc.utl.slds-p-left_medium",
+        "body": ["slds-p-left_medium",
+           
+            "$2"
+        ],
+        "description": "LWC Utility Padding Class. (ROY-LWC CodeMate)"
+    },  
+    "roy.lwc.utl.slds-is-fixed": {
+        "prefix": "roy.lwc.utl.slds-is-fixed",
+        "body": ["slds-is-fixed",
+           
+            "$2"
+        ],
+        "description": "LWC Utility Position Class. Variant (fixed, absolute, relative, static). (ROY-LWC CodeMate)"
+    },    
+    "roy.lwc.utl.slds-no-print": {
+        "prefix": "roy.lwc.utl.slds-no-print",
+        "body": ["slds-no-print",
+           
+            "$2"
+        ],
+        "description": "LWC Utility Print Class. (Use in </div>). (ROY-LWC CodeMate)"
+    },  
+    "roy.lwc.utl.slds-scrollable": {
+        "prefix": "roy.lwc.utl.slds-scrollable",
+        "body": ["slds-scrollable",
+           
+            "$2"
+        ],
+        "description": "LWC Utility Scrollable Class, (Auto). (ROY-LWC CodeMate)"
+    },  
+    "roy.lwc.utl.slds-scrollable_none": {
+        "prefix": "roy.lwc.utl.slds-scrollable_none",
+        "body": ["slds-scrollable_none",
+           
+            "$2"
+        ],
+        "description": "LWC Utility Scrollable Class. Variant (none, x, y). (ROY-LWC CodeMate)"
+    },   
+    "roy.lwc.utl.slds-text-title": {
+        "prefix": "roy.lwc.utl.slds-text-title",
+        "body": ["slds-text-title",
+        "<!--  Varient: slds-text-body_regular/ slds-text-heading_large/ slds-text-title_caps/ slds-text-longform/", 
+        "slds-text-align_right/ slds-text-color_error/ slds-text-font_monospace  -->",
+           
+            "$2"
+        ],
+        "description": "LWC Utility Text Class. (ROY-LWC CodeMate)"
+    },   
+    "roy.lwc.utl.slds-truncate": {
+        "prefix": "roy.lwc.utl.slds-truncate",
+        "body": ["slds-truncate",
+           
+            "$2"
+        ],
+        "description": "LWC Utility Truncation Class. (ROY-LWC CodeMate)"
+    }, 
+    "roy.lwc.utl.slds-hidden": {
+        "prefix": "roy.lwc.utl.slds-hidden",
+        "body": ["slds-hidden",
+           
+            "$2"
+        ],
+        "description": "LWC Utility Visibility Class. (ROY-LWC CodeMate)"
+    },   
+    "roy.lwc.utl.slds-is-collapsed": {
+        "prefix": "roy.lwc.utl.slds-is-collapsed",
+        "body": ["slds-is-collapsed",
+           
+            "$2"
+        ],
+        "description": "LWC Utility Visibility Class. (ROY-LWC CodeMate)"
+    }            
+}
+
