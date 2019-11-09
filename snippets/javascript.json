@@ -1025,8 +1025,7 @@
    },
 	"roy.lwc.import-lightning-message-service": {
 		"prefix": "roy.lwc.import-lightning-message-service",
-	    "body": ["import { createMessageContext, releaseMessageContext",
-					 "subscribe, unsubscribe } from 'lightning/messageService';",
+	    "body": ["import { publish, createMessageContext, releaseMessageContext, subscribe, unsubscribe } from 'lightning/messageService';",
 		"$2"
 		       ],
 	    "description": "LWC- Import Lightning Message Service. This is Winter ’20 Updates. (ROY-LWC CodeMate)"
